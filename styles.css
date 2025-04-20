@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* تدرج اللون */
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInUp 2s forwards;
+}
+
+.logo {
+    width: 150px;
+    animation: logoMove 1.5s ease-in-out;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.name {
+    font-size: 36px;
+    color: white;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeInButtons 2s ease-in-out forwards;
+    transition: opacity 0.5s;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.button:first-child {
+    animation-delay: 1s;
+}
+
+.button:last-child {
+    animation-delay: 1.5s;
+}
+
+@keyframes logoMove {
+    0% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInButtons {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
